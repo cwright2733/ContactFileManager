@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.intracode.contactmanager.ContactManager.MainActivity">
+
+    <TabHost
+        android:id="@+id/Host"
+        android:layout_width="wrap_content"
+        android:layout_height="469dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="66dp" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tabCreator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Creator"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:visibility="visible"
+                        tools:layout_editor_absoluteX="34dp"
+                        tools:layout_editor_absoluteY="30dp"
+                        tools:text="Contact Creator" />
+
+                    <EditText
+                        android:id="@+id/contactname"
+                        android:layout_width="match_parent"
+                        android:layout_height="88dp"
+                        android:ems="10"
+                        android:hint="@string/app_name"
+                        android:inputType="textPersonName"
+                        android:singleLine="false"
+                        android:text="Contact Name"
+                        tools:layout_editor_absoluteX="18dp"
+                        tools:layout_editor_absoluteY="138dp"
+                        tools:text="Contact Name" />
+
+                    <EditText
+                        android:id="@+id/phonenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:text="Phone Number"
+                        tools:layout_editor_absoluteX="18dp"
+                        tools:layout_editor_absoluteY="216dp"
+                        tools:text="Phone Number" />
+
+                    <EditText
+                        android:id="@+id/adress"
+                        android:layout_width="match_parent"
+                        android:layout_height="63dp"
+                        android:ems="10"
+                        android:hint="Adress"
+                        android:inputType="textPostalAddress"
+                        android:text="Adress"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="364dp"
+                        tools:text="Adress" />
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dp"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:text="Email"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="289dp"
+                        tools:text="Email" />
+
+                    <Button
+                        android:id="@+id/addcontact"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="contact has sucessfully been added"
+                        android:text="Add Contact"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabContactList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:text="File" />
+
+                    <ListView
+                        android:id="@+id/listview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="242dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</android.support.constraint.ConstraintLayout>
